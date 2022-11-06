@@ -117,37 +117,61 @@ char* mystrcat(char* str1, const char* str2) {
 }
 char* mystrchr(char* str, char s) {
     char* newStr = new char[strlen(str)];
-    strchr(str, s);
+    newStr = strchr(str, s);
     return newStr;
 }
 char* mystrstr(char* str1, char* str2) {
     char* newStr = new char[strlen(str1)];
     newStr = strstr(str1, str2);
+    return newStr;
 }
 //---
 
 
 void Task7() {
-    FILE* in;
-    char path[200];
-    char mask[20];
-    cout << "Enter a full path (for example, \"D:\\\")\n";
+    FILE* out;
+    char path[200]; //Основной путь до папки
+    char mask[20]; //Расширения файла
+    char fullPath[220]; //path+mask
+    char nameFile[220]; //Полный путь к конкретному файлу
+    char* word = new char[45];//Искомое слово
+    char* buff = new char[255]; //Буфер для поиска
+    char* buffTwo = new char[255]; //Второй буфер для поиска
+    cout << "Enter a full path (for example, \"C:\\Test\\ \")\n";
     cin >> path;
     cout << "Enter mask (for exmaple, \"*.txt\")\n";
     cin >> mask;
 
-    strcat_s(path, mask);
+    strcpy_s(fullPath, path);
+    strcat_s(fullPath, mask);
 
+    cout << "Please enter the searching word:\n";
+    cin >> word;
+    int counter = 0; //Кол-во совпадений
     struct _finddata_t fileinfo;
-    char str[200] = "C:\\Test\\*.txt";
-
-    intptr_t done = _findfirst(path, &fileinfo);
+    intptr_t done = _findfirst(fullPath, &fileinfo);
+    system("cls");
+    cout << "Matches files:\n";
+    //Я не смог разрешить проблему, но на втором файле он не может считать буфер, мол, чтение памяти невозможно
     do {
-        cout << fileinfo.name << " " << fileinfo.size << endl;
+        strcpy_s(nameFile, path);
+        strcat_s(nameFile, fileinfo.name);
+        if (!fopen_s(&out, nameFile, "r")) {
+            while (!feof(out)) {
+                buffTwo = fgets(buff, 255, out);
+                while (buffTwo = strstr(buffTwo, word)) {
+                    buffTwo++;
+                    counter++;
+                }
+            }
+            cout << nameFile << endl;
+            fclose(out);
+        }
     } while (_findnext(done, &fileinfo) != -1);
-
-
-
+    if (counter == 0)
+        cout << "Matches weren't founded\n";
+    else
+        cout << "Amount of matches - " << counter << endl;
 
 }
 
@@ -158,7 +182,7 @@ int main()
     int* B = new int[size] {1, 2, 3, 4, 5};
     int* C = new int[size];
     //Task5(A, B, C, size);
-
+    Task7();
 
 
 }
