@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-04T16:39:35.030Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62" etag="Y-NdrG8VFqJH8jPuyZSc" version="21.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-04T16:45:49.582Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62" etag="KiPpDOeY3Q-unDyrkQbU" version="21.1.1" type="github">
   <diagram name="Страница 1" id="AMioQ5z1uBzVPYg-4qCF">
-    <mxGraphModel dx="8880" dy="5889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3023" dy="1287" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -199,7 +199,7 @@
             <mxPoint x="-10" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-60" value="Поиск товара" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-60" value="Проверка базы данных на наличие товара" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1190" y="700" as="sourcePoint" />
             <Array as="points">
@@ -325,15 +325,15 @@
             <mxPoint x="1170" y="1280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-94" value="Взять товар со склада" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KrzIYM4kpdeG3VqTeWPZ-93">
+        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-94" value="Найти товар на складе" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="KrzIYM4kpdeG3VqTeWPZ-93">
           <mxGeometry x="0.0294" y="-2" relative="1" as="geometry">
             <mxPoint x="15" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-95" value="return товар" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-95" value="return товар&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry x="0.3223" relative="1" as="geometry">
             <mxPoint x="1180" y="1350" as="sourcePoint" />
-            <mxPoint x="560" y="1350" as="targetPoint" />
+            <mxPoint x="950" y="1350" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -360,7 +360,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="KrzIYM4kpdeG3VqTeWPZ-109" value="&lt;font style=&quot;font-size: 120px;&quot;&gt;Задание 1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-827" y="-210" width="600" height="160" as="geometry" />
+          <mxGeometry x="-820" y="10" width="600" height="160" as="geometry" />
         </mxCell>
         <mxCell id="KrzIYM4kpdeG3VqTeWPZ-114" value="Customer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2280" y="50" width="160" height="164" as="geometry" />
@@ -487,7 +487,14 @@
           <mxGeometry x="1900" y="511" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="KrzIYM4kpdeG3VqTeWPZ-170" value="&lt;font style=&quot;font-size: 120px;&quot;&gt;Задание 2&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-827" y="1640" width="600" height="160" as="geometry" />
+          <mxGeometry x="-820" y="1770" width="600" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="KrzIYM4kpdeG3VqTeWPZ-172" value="return товар" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.3223" relative="1" as="geometry">
+            <mxPoint x="930" y="1360" as="sourcePoint" />
+            <mxPoint x="570" y="1360" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
